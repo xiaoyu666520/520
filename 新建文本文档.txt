@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <!-- 适配移动端 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的第一个网页</title>
+    <style>
+        /* 全局样式重置 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Microsoft YaHei", sans-serif;
+        }
+
+        /* 导航栏样式 */
+        nav {
+            background-color: #2c3e50;
+            color: white;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #3498db;
+        }
+
+        /* 主体容器 */
+        .container {
+            display: flex;
+            max-width: 1200px;
+            margin: 2rem auto;
+            gap: 2rem;
+            padding: 0 1rem;
+        }
+
+        /* 主要内容区 */
+        main {
+            flex: 3;
+            background-color: #f8f9fa;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+
+        main h1 {
+            color: #2c3e50;
+            margin-bottom: 1rem;
+        }
+
+        main p {
+            line-height: 1.6;
+            color: #34495e;
+            margin-bottom: 1rem;
+        }
+
+        /* 侧边栏 */
+        aside {
+            flex: 1;
+            background-color: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+
+        aside h3 {
+            color: #2c3e50;
+            margin-bottom: 1rem;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 0.5rem;
+        }
+
+        .sidebar-links {
+            list-style: none;
+        }
+
+        .sidebar-links li {
+            margin-bottom: 0.8rem;
+        }
+
+        .sidebar-links a {
+            color: #3498db;
+            text-decoration: none;
+        }
+
+        .sidebar-links a:hover {
+            text-decoration: underline;
+        }
+
+        /* 页脚 */
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        /* 响应式适配（移动端） */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+
+            .nav-links {
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav>
+        <div class="logo">我的网页</div>
+        <ul class="nav-links">
+            <li><a href="#">首页</a></li>
+            <li><a href="#">关于我</a></li>
+            <li><a href="#">作品</a></li>
+            <li><a href="#">联系我</a></li>
+        </ul>
+    </nav>
+
+    <!-- 主体内容 -->
+    <div class="container">
+        <main>
+            <h1>欢迎来到我的网页</h1>
+            <p>这是一个使用纯 HTML 和 CSS 制作的基础网页示例，包含了网页的核心结构：导航栏、主体内容区、侧边栏和页脚。</p>
+            <p>这个网页支持响应式布局，在手机、平板、电脑等不同设备上都能正常显示。你可以根据自己的需求修改文字、颜色、布局等内容。</p>
+            <p>如果你想添加更多功能（比如表单、图片轮播、交互效果），可以在此基础上扩展，或者引入 JavaScript 实现动态效果。</p>
+        </main>
+
+        <aside>
+            <h3>快速链接</h3>
+            <ul class="sidebar-links">
+                <li><a href="#">HTML 教程</a></li>
+                <li><a href="#">CSS 教程</a></li>
+                <li><a href="#">响应式设计</a></li>
+                <li><a href="#">网页优化</a></li>
+            </ul>
+        </aside>
+    </div>
+
+    <!-- 页脚 -->
+    <footer>
+        <p>© 2026 我的网页 - 保留所有权利</p>
+    </footer>
+</body>
+</html>
