@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<meta charset="utf-8" name="viewport" content="width=device-width, <!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>小雨天天开心</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background: #000;
+  color: #fff;
+  font-family: "Microsoft Yahei", sans-serif;
+  overflow: hidden;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+}
+
+/* 雨点动画 */
+.rain {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+.rain::before,
+.rain::after {
+  content: "";
+  position: absolute;
+  background: rgba(173, 216, 230, 0.3);
+  width: 1.5px;
+  height: 100px;
+  animation: rainFall linear infinite;
+}
+.rain::before {
+  left: 20%;
+  animation-duration: 1.2s;
+}
+.rain::after {
+  left: 60%;
+  animation-duration: 1.5s;
+}
+@keyframes rainFall {
+  0% { transform: translateY(-100vh); opacity: 0; }
+  10% { opacity: 1; }
+  100% { transform: translateY(100vh); opacity: 0; }
+}
+
+/* 文字 */
+.title {
+  font-size: 48px;
+  font-weight: bold;
+  color: #7fc8ff;
+  text-shadow: 0 0 15px #42a5ff;
+  margin-bottom: 20px;
+  z-index: 2;
+}
+.desc {
+  font-size: 20px;
+  color: #cce7ff;
+  z-index: 2;
+}
+</style>
+</head>
+
+<body>
+<!-- 雨点背景 -->
+<div class="rain"></div>
+
+<!-- 主题文字 -->
+<div class="title">小雨天天开心</div>
+<div class="desc">从前从前有个人爱你很久 ✨</div>
+
+<!-- 背景音乐：周杰伦 - 晴天 -->
+<audio autoplay loop controls>
+  <source src=https://c6.y.qq.com/base/fcgi-bin/u?__=aDIAMGRkD8Aj type="audio/mpeg">
+
+
+</body>
+</html>
